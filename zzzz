@@ -1,0 +1,18 @@
+#!/bin/sh /etc/rc.common
+
+# Start the tunnel.sh script
+START=99
+STOP=10
+
+sleep 1
+start() {
+    tmux new-session -d -s start
+    tmux send-keys -t start "python3 /root/check.py" C-m
+}
+
+stop() {
+    # If you want to stop the tunnel script, you can add kill command here.
+    sleep 1
+    tmux send-keys -t start C-c
+    tmux kill-session -t start
+}

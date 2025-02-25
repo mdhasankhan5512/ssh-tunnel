@@ -1,0 +1,20 @@
+#!/bin/sh /etc/rc.common
+
+# Start the tunnel.sh script
+START=99
+STOP=10
+
+sleep 25
+start() {
+    /root/tunnel.sh
+    /etc/init.d/passwall start
+}
+
+stop() {
+    # If you want to stop the tunnel script, you can add kill command here.
+    tmux kill-session -t server_1
+    tmux kill-session -t server_2
+    tmux kill-session -t server_3
+    tmux kill-session -t server_4
+    tmux kill-session -t server_5
+}

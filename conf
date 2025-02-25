@@ -1,0 +1,26 @@
+config server 'server_1'
+	option sni 'cdn.snapchat.com'
+	option local_port '2020'
+	list servers 'de2.tun1.pro:443@sshstores-shayan6:H5512552:03-03-2025'
+
+config server 'server_2'
+	option sni 'cdn.snapchat.com'
+	option local_port '3030'
+	list servers 'de2.tun1.pro:443@sshstores-shayan8:H5512552:03-03-2025'
+
+config server 'server_3'
+	option sni 'cdn.snapchat.com'
+	option local_port '4040'
+	list servers 'sg4.tun1.pro:443@sshstores-shayan39:H5512552:04-03-2025'
+
+config server 'server_4'
+	option sni 'cdn.snapchat.com'
+	option local_port '5050'
+	list servers 'sg3.tun1.pro:443@sshstores-bfnantett:H5512552:04-03-2025'
+
+config server 'server_5'
+	option sni 'cdn.snapchat.com'
+	option local_port '6060'
+	list servers 'sg2.tun1.pro:443:sshstores-shayan24:H5512552:04-03-2025'
+
+config tunnel 'settings'
