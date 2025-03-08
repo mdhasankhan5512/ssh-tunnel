@@ -8,6 +8,8 @@ sleep 1
 start() {
     tmux new-session -d -s start
     tmux send-keys -t start "python3 /root/check.py" C-m
+    sleep 29 
+    /etc/init.d/passwall start
 }
 
 stop() {
